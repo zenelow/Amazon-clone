@@ -78,6 +78,117 @@
   flex-direction: column;
 }
 
+.category-section {
+  background-color: white;
+  padding: 20px;
+  margin-bottom: 30px;
+  border: 1px solid rgb(231, 231, 231);
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.category-title {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #e7e7e7;
+  color: #c45500;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.see-more-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+  padding-top: 15px;
+}
+
+.see-more-button {
+  background: linear-gradient(to bottom, #fff, #f7f8f8);
+  border: 1px solid #a2a6ac;
+  border-radius: 8px;
+  padding: 10px 24px;
+  cursor: pointer;
+  font-weight: 500;
+  color: #111;
+  font-size: 14px;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 5px rgba(213, 217, 217, 0.5);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.see-more-button:hover {
+  background: linear-gradient(to bottom, #f7f8f8, #e7e9ec);
+  border-color: #adb1b8;
+  box-shadow: 0 2px 5px rgba(213, 217, 217, 0.5);
+  transform: translateY(-1px);
+}
+
+.see-more-button:active {
+  background: #edeff1;
+  border-color: #007185;
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);
+  transform: translateY(0);
+}
+
+.see-more-button::after {
+  content: '▼';
+  font-size: 10px;
+  color: #565959;
+}
+
+.product-container.hidden {
+  display: none;
+}
+
+.recommendations-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 20px;
+}
+
+.recommendation-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.recommendation-image-container {
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.recommendation-image {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.recommendation-name {
+  font-size: 14px;
+  height: 32px;
+  margin-bottom: 8px;
+}
+
+@media (max-width: 800px) {
+  .recommendations-grid {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 20px;
+  }
+}
+
+@media (max-width: 450px) {
+  .recommendations-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 .product-image-container {
   display: flex;
   justify-content: center;
